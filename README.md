@@ -9,3 +9,9 @@ First all should you installer VirtuallBox (Zuerst Soll man installer Virualbox)
 (and also)und auch Debian : https://www.debian.org/download <br>
 This video Explain you how to can installer Debian on VirtualBox without Probleme <br>
 (Dieses Video erklären Sie wie können Sie installer Debian auf VirtualBox ohne Ursachen): https://www.youtube.com/embed/OQEdjt38ZJA <br>
+
+<h1>Server configuration:</h1>
+<h2>Sudo install (Super User DO)</h2>
+Switch to root and its environment
+$ su -
+Password:
