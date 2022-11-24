@@ -54,7 +54,7 @@ Verify whether ufw was successfully installed: <code>dpkg -l | grep ufw</code> <
 or check by command : <code>sudo ufw status</code> <br>
 Enable Firewall: <code>sudo ufw enable</code> <br>
 Allow incoming connections using Port 4242: <code>sudo ufw allow 4242</code>
-<h2 id="con">Connecting to a Server Using SSH</h2>
+<h2 id="con">Step 3: Connecting to a Server Using SSH</h2>
 - Get Your Server IP Address : <code>hostname -I</code> <br>
 IP adresse : <code>10.02.15</code> <br>
 SSH into your virtual machine using Port 4242: <code>ssh UserName@IPAddressOrHostname</code> <br>
