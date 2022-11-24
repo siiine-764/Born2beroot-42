@@ -13,5 +13,7 @@ This video Explain you how to can installer Debian on VirtualBox without Problem
 <h1>Server configuration:</h1>
 <h2>Sudo install (Super User DO)</h2>
 Switch to root and its environment
+<code>
 $ su -
 Password:
+</code>
