@@ -9,9 +9,9 @@ source (Quelle) : https://www.notion.so/Born2beroot-ad4abe5d9e724c70bda4e113dde1
 <li> 2. <a href="#tab2">Server configuration</a> </li>
 <li> 3. <a href="#tab3">SSH (Secure Shell)</a> </li>
       <ul>
-        <li><a href="#install">installing&Configuring SSH (Secure Shell)</a></li>
+        <li><a href="#install">installing&Configuring SSH</a></li>
         <li><a href="#config">Installing & Configuring UFW firewall</a></li>
-        <li><a href="#con">installing&Configuring SSH (Secure Shell)</a></li>
+        <li><a href="#con">Connecting to a Server Using SSH</a></li>
       </ul>
 </ul>
 
