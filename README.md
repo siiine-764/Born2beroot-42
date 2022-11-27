@@ -97,14 +97,19 @@ SSH into your virtual machine using Port 4242: <code>ssh UserName@IPAddressOrHos
       Open File /etc/sudoers.d
       <code>nano /etc/sudoers.d</code> <br>
       • Authentication using sudo has to be limited to 3 attempts in the event of an incorrect password.<br>
-      
-      
+
+
+      // Authentication using sudo has to be limited to 3 attempts in the event of an incorrect password.
       Defaults  passwd_tries=3
-      Defaults  badpass_message="Mensaje de error personalizado"
+      // A custom message of your choice has to be displayed if an error due to a wrong password occurs when using sudo.
+      Defaults  badpass_message="Opsss you make me smile :)"
+      // Each action using sudo has to be archived, both inputs and outputs. The log file has to be saved in the /var/log/sudo/ folder.
       Defaults  logfile="/var/log/sudo/sudo_config"
       Defaults  log_input, log_output
       Defaults  iolog_dir="/var/log/sudo"
+      // The TTY mode has to be enabled for security reasons.
       Defaults  requiretty
+      // For security reasons too, the paths that can be used by sudo must be restricted.
       Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
       
 
