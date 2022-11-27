@@ -327,8 +327,14 @@ to
       define( 'DB_USER', '<username>' );
       define( 'DB_PASSWORD', '<password>' );
       
+Configuratoin this in lighttpd :
 
+      sudo lighty-enable-mod fastcgi
 
+      sudo lighty-enable-mod fastcgi-php
+
+      sudo service lighttpd force-reload
+      
 
 
 
