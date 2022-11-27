@@ -13,6 +13,8 @@ source (Quelle) : https://www.notion.so/Born2beroot-ad4abe5d9e724c70bda4e113dde1
         <li><a href="#config">Installing & Configuring UFW firewall</a></li>
         <li><a href="#con">Connecting to a Server Using SSH</a></li>
       </ul>
+<li>4. <a href="#con">To set up a strong password policy</a></li>
+<li>5. <a href="#tab3">To set up a strong configuration for your sudo group</a> </li>
 </ul>
 
 <h1 id="tab1">Installation</h1>
@@ -59,9 +61,52 @@ Allow incoming connections using Port 4242: <code>sudo ufw allow 4242</code>
 IP adresse : <code>10.02.15</code> <br>
 SSH into your virtual machine using Port 4242: <code>ssh UserName@IPAddressOrHostname</code> <br>
 - Exit: <code>logout</code>
-
-
-
+<h1 id="config">To set up a strong password policy</h1>
+- Open folder /etc/login.defs to Change :
+<code>$ sudo nano /etc/login.defs</code> <br>
+      • Your password has to expire every 30 days. <br>
+      Before -> <code>PASS_MAX_DAYS 99999</code><br>
+      After -> <code>PASS_MAX_DAYS 30</code><br>
+      • The minimum number of days allowed before the modification of a password will be set to 2. <br4>
+      Before -> <code>PASS_MIN_DAYS 0</code><br>
+      After -> <code>PASS_MIN_DAYS 2</code><br>
+      • The user has to receive a warning message 7 days before their password expires. <br>
+      <code>PASS_WARN_AGE 7</code><br>
+      • Your password must be at least 10 characters long. It must contain an uppercase letter, a lowercase letter, and a number. Also, it must not             contain more than 3 consecutive identical characters. <br>
+      To do this part you should install <code>libpam-pwquality</code> <br>
+      <code>$	sudo apt install libpam-pwquality</code> <br>
+      <code>$	sudo nano /etc/pam.d/common-password</code> <br>
+      Your password must be at least 10 characters long. <br>
+      minlen = 10 <br>
+      It must contain an uppercase letter <br>
+      <code>ucredit=-1</code> <br>
+      It must contain an lowercase letter
+      <code>lcredit=-1</code> <br>
+      It must contain a number <br>
+      <code>lcredit=-1</code> <br>
+      it must not contain more than 3 consecutive identical characters <br>
+      <code>maxrepeat=3</code><br>
+      • The password must not include the name of the user. <br>
+      <code>reject_username</code> <br>
+      • The following rule does not apply to the root password: The password must have
+      at least 7 characters that are not part of the former password. <br>
+      <code>difok=7</code> <br>
+      • Of course, your root password has to comply with this policy <br>
+<img width="1127" alt="179329511-0619183a-8ccc-456b-8f27-3962fc542cc3" src="https://user-images.githubusercontent.com/80540449/204153082-5e0700ec-bcb2-42ad-8168-4c6169bb61c6.png">
+<h1>To set up a strong configuration for your sudo group</h1>
+      Open File /etc/sudoers.d
+      <code>nano /etc/sudoers.d</code> <br>
+      • Authentication using sudo has to be limited to 3 attempts in the event of an incorrect password.<br>
+      
+      
+      Defaults  passwd_tries=3
+      Defaults  badpass_message="Mensaje de error personalizado"
+      Defaults  logfile="/var/log/sudo/sudo_config"
+      Defaults  log_input, log_output
+      Defaults  iolog_dir="/var/log/sudo"
+      Defaults  requiretty
+      Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+      
 
 
 
