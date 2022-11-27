@@ -13,8 +13,8 @@ source (Quelle) : https://www.notion.so/Born2beroot-ad4abe5d9e724c70bda4e113dde1
         <li><a href="#config">Installing & Configuring UFW firewall</a></li>
         <li><a href="#con">Connecting to a Server Using SSH</a></li>
       </ul>
-<li>4. <a href="#con">To set up a strong password policy</a></li>
-<li>5. <a href="#tab3">To set up a strong configuration for your sudo group</a> </li>
+<li>4. <a href="#configuration_strongpassword">To set up a strong password policy</a></li>
+<li>5. <a href="#configuration_sudogroup">To set up a strong configuration for your sudo group</a> </li>
 </ul>
 
 <h1 id="tab1">Installation</h1>
@@ -61,7 +61,8 @@ Allow incoming connections using Port 4242: <code>sudo ufw allow 4242</code>
 IP adresse : <code>10.02.15</code> <br>
 SSH into your virtual machine using Port 4242: <code>ssh UserName@IPAddressOrHostname</code> <br>
 - Exit: <code>logout</code>
-<h1 id="config">To set up a strong password policy</h1>
+
+<h1 id="configuration_strongpassword">To set up a strong password policy</h1>
 - Open folder /etc/login.defs to Change :
 <code>$ sudo nano /etc/login.defs</code> <br>
       • Your password has to expire every 30 days. <br>
@@ -93,10 +94,9 @@ SSH into your virtual machine using Port 4242: <code>ssh UserName@IPAddressOrHos
       <code>difok=7</code> <br>
       • Of course, your root password has to comply with this policy <br>
 <img width="1127" alt="179329511-0619183a-8ccc-456b-8f27-3962fc542cc3" src="https://user-images.githubusercontent.com/80540449/204153082-5e0700ec-bcb2-42ad-8168-4c6169bb61c6.png">
-<h1>To set up a strong configuration for your sudo group</h1>
+<h1 id="configuration_sudogroup">To set up a strong configuration for your sudo group</h1>
       Open File /etc/sudoers.d
-      <code>nano /etc/sudoers.d</code> <br>
-      • Authentication using sudo has to be limited to 3 attempts in the event of an incorrect password.<br>
+      <code>nano /etc/sudoers.d</code>, and add this :<br> <br>
 
 
       // Authentication using sudo has to be limited to 3 attempts in the event of an incorrect password.
