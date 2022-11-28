@@ -13,8 +13,9 @@ source (Quelle) : https://www.notion.so/Born2beroot-ad4abe5d9e724c70bda4e113dde1
         <li><h5><a href="#config">Step 2: Installing & Configuring UFW firewall</a></h5></li>
         <li><h5><a href="#con">Step 3: Connecting to a Server Using SSH</a></h5></li>
       </ul>
-<li><h3>4. <a href="#configuration_strongpassword">To set up a strong password policy</a></h3></li>
-<li><h3>5. <a href="#configuration_sudogroup">To set up a strong configuration for your sudo group</a></h3> </li>
+<li><h3>4. <a href="#hostname">Change hostname</a></h3></li>
+<li><h3>5. <a href="#configuration_strongpassword">To set up a strong password policy</a></h3></li>
+<li><h3>6. <a href="#configuration_sudogroup">To set up a strong configuration for your sudo group</a></h3> </li>
 <li>
       <h3><a href="#configuration_sudogroup">Bonus Part (WordPress Set up)</a></h3>
             <ul>
@@ -117,6 +118,14 @@ Exit:
 
       logout
 
+<h1 id="hostname">change hostname</h1>
+
+      hostnamectl set-hostname yourname+42
+
+refresh :
+
+      reboot
+
 <h1 id="configuration_strongpassword">To set up a strong password policy</h1>
 - Open folder /etc/login.defs to Change :
 
@@ -204,6 +213,18 @@ And add this :
       // For security reasons too, the paths that can be used by sudo must be restricted.
       Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
  
+<h1 id="bonus">Bonus Part (WordPress Set up)</h1>
+
+      sudo adduser newuser42
+      
+      sudo addgroup pasta
+
+      sudo usemod -aG pasta user42
+
+check groups
+
+      groups
+      
 <h1 id="bonus">Bonus Part (WordPress Set up)</h1>
 <br>
 <h2 id="lighttpd">step 1: Lighttpd</h2>
