@@ -213,13 +213,13 @@ And add this :
       // For security reasons too, the paths that can be used by sudo must be restricted.
       Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
  
-<h1 id="bonus">Bonus Part (WordPress Set up)</h1>
+<h1 id="bonus">Create Group :</h1>
 
       sudo adduser newuser42
       
-      sudo addgroup pasta
+      sudo addgroup user42
 
-      sudo usemod -aG pasta user42
+      sudo usemod -aG user42 newuser42
 
 check groups
 
