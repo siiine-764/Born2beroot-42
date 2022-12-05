@@ -2,27 +2,30 @@
 This Project consists of having you set up your first server by following specific rules.
 Dieses Projekt besteht darin, dass Sie Ihren ersten Server nach bestimmten Regeln einrichten.
 
+<img src="https://user-images.githubusercontent.com/80540449/205660657-5b662557-5748-4349-918b-aa560d2ca76f.jpeg"  width="100%"/>
+
 source (Quelle) : https://www.notion.so/Born2beroot-ad4abe5d9e724c70bda4e113dde1ea59
 <br>
 <ul>
-<li> <h3>1. <a href="#tab1">Installation!</a></h3></li>
-<li> <h3>2. <a href="#tab2">Server configuration</a> </h3></li>
-<li> <h3>3. <a href="#tab3">SSH (Secure Shell)</a></h3> </li>
+<li> <h1>1. <a href="#tab1">Installation!</a></h1></li>
+<li> <h1>2. <a href="#tab2">Server configuration</a> </h1></li>
+<li> <h1>3. <a href="#tab3">SSH (Secure Shell)</a></h1> </li>
       <ul>
-        <li><h5><a href="#install">Step 1: installing&Configuring SSH</a></h5></li>
-        <li><h5><a href="#config">Step 2: Installing & Configuring UFW firewall</a></h5></li>
-        <li><h5><a href="#con">Step 3: Connecting to a Server Using SSH</a></h5></li>
+        <li><h3><a href="#install">Step 1: installing&Configuring SSH</a></h3></li>
+        <li><h3><a href="#config">Step 2: Installing & Configuring UFW firewall</a></h3></li>
+        <li><h3><a href="#con">Step 3: Connecting to a Server Using SSH</a></h3></li>
       </ul>
-<li><h3>4. <a href="#hostname">Change hostname</a></h3></li>
-<li><h3>5. <a href="#configuration_strongpassword">To set up a strong password policy</a></h3></li>
-<li><h3>6. <a href="#configuration_sudogroup">To set up a strong configuration for your sudo group</a></h3> </li>
+<li><h1>4. <a href="#hostname">Change hostname</a></h2></li>
+<li><h1>5. <a href="#configuration_strongpassword">To set up a strong password policy</a></h1></li>
+<li><h1>6. <a href="#crontab">Crontab</a></h1></li>
+<li><h1>6. <a href="#configuration_sudogroup">To set up a strong configuration for your sudo group</a></h1></li>
 <li>
       <h3><a href="#configuration_sudogroup">Bonus Part (WordPress Set up)</a></h3>
             <ul>
-        <li><h5><a href="#lighttpd">step 1: Lighttpd</a></h5></li>
-        <li><h5><a href="#mariadb">step 2: Mariadb</a></h5></li>
-        <li><h5><a href="#php">step 3: PHP</a></h5></li>
-        <li><h5><a href="#configwp">step 4: Download&Configuring WordPess</a></h5></li>
+        <li><h3><a href="#lighttpd">step 1: Lighttpd</a></h3></li>
+        <li><h3><a href="#mariadb">step 2: Mariadb</a></h3></li>
+        <li><h3><a href="#php">step 3: PHP</a></h3></li>
+        <li><h3><a href="#configwp">step 4: Download&Configuring WordPess</a></h3></li>
       </ul>
 </li>
 </ul>
@@ -225,6 +228,15 @@ check groups
 
       groups
       
+
+<h1 id="crontab">Crontab</h1>
+
+      sudo crontab -u root -e
+
+Add this line in this file :
+
+      */10 * * * * sh /ruta del script
+
 <h1 id="bonus">Bonus Part (WordPress Set up)</h1>
 <br>
 <h2 id="lighttpd">step 1: Lighttpd</h2>
@@ -356,6 +368,10 @@ Configuratoin this in lighttpd :
 
       sudo service lighttpd force-reload
       
+      
+      
+<img src="https://user-images.githubusercontent.com/80540449/205659975-6b66b3c4-ee83-40f2-b9c5-3a6803ad41e8.png"  width="50%"/>
+
 
 
 
