@@ -18,7 +18,7 @@ source (Quelle) : https://www.notion.so/Born2beroot-ad4abe5d9e724c70bda4e113dde1
 <li><h1>4. <a href="#hostname">Change hostname</a></h2></li>
 <li><h1>5. <a href="#configuration_strongpassword">To set up a strong password policy</a></h1></li>
 <li><h1>6. <a href="#crontab">Crontab</a></h1></li>
-<li><h1>6. <a href="#configuration_sudogroup">To set up a strong configuration for your sudo group</a></h1></li>
+<li><h1>7. <a href="#configuration_sudogroup">To set up a strong configuration for your sudo group</a></h1></li>
 <li>
       <h3><a href="#configuration_sudogroup">Bonus Part (WordPress Set up)</a></h3>
             <ul>
@@ -229,7 +229,7 @@ check groups
       groups
       
 
-<h1 id="crontab">Crontab</h1>
+<h1 id="crontab">6. Crontab</h1>
 
       sudo crontab -u root -e
 
