@@ -371,6 +371,7 @@ Configuratoin this in lighttpd :
       
       
 <img src="https://user-images.githubusercontent.com/80540449/205659975-6b66b3c4-ee83-40f2-b9c5-3a6803ad41e8.png"  width="50%"/>
+.................
 
 
 
