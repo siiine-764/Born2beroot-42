@@ -50,6 +50,17 @@ This video Explain you how to can installer Debian on VirtualBox without Problem
 
       dpkg -l | grep sudo
 
+- Add user to sudo group
+
+      # adduser <username> sudo
+
+- or 
+
+      usermod -aG sudo <username>
+- Verify whether user was successfully added to sudo group :
+
+      getent group sudo
+     
 <h1 id="tab3">SSH (Secure Shell)</h1>
 <br>
 <h2 id="install"> Step 1: installing&Configuring SSH (Secure Shell)</h2>
