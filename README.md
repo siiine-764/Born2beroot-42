@@ -196,7 +196,7 @@ It must contain an lowercase letter
       
 It must contain a number
 
-      lcredit=-1
+      dcredit=-1
 
 it must not contain more than 3 consecutive identical characters
 
