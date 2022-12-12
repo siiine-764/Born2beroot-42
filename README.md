@@ -99,7 +99,7 @@ to :
 - Start and Stop the SSH Server
 
       sudo service ssh start
-      sudo service ssh start
+      sudo service ssh stop
 
 <h2 id="config">Step 2: Installing & Configuring UFW</h2>
 Install ufw 
@@ -129,11 +129,11 @@ Get Your Server IP Address :
 
 IP adresse : 
 
-      10.02.15
+      10.0.2.15
 
 SSH into your virtual machine using Port 4242
 
-      ssh UserName@IPAddressHostname
+      ssh UserName@IPAddressHostname -p 4242
       
 Exit: 
 
