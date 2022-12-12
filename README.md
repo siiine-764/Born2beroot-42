@@ -240,13 +240,12 @@ And add this :
       
       sudo addgroup user42
 
-      sudo usemod -aG user42 newuser42
+      sudo usermod -aG user42 newuser42
 
 check groups
 
-      groups
+      getent group user42
       
-
 <h1 id="crontab">6. Crontab</h1>
 
       sudo crontab -u root -e
