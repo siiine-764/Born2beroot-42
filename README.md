@@ -359,11 +359,11 @@ Remove folder wordpess
 
 in <code>/var/www/html</code> Create WordPress configuration file
 
-      sudo cp /wp-config-sample.php /wp-config.php
+      sudo cp ./wp-config-sample.php ./wp-config.php
 
 visit <code>wp-config.php</code>
 
-      sudo vi wp-config.php
+      sudo nano wp-config.php
       
 And replace :
 
