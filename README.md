@@ -252,7 +252,7 @@ check groups
 
 Add this line in this file :
 
-      */10 * * * * sh /ruta del script
+      */10 * * * * sh /path/to/script
       
 To check crontab :
 
