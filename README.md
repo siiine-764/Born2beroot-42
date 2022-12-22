@@ -252,8 +252,9 @@ check groups
 
 Add this line in this file :
 
-      */10 * * * * sh /path/to/script
+      */10 * * * * sh /home/user/monitoring.sh
       
+      sudo chmod 777 monitoring.sh
 To check crontab :
 
       sudo crontab -u root -l
