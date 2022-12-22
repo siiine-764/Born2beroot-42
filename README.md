@@ -253,7 +253,11 @@ check groups
 Add this line in this file :
 
       */10 * * * * sh /ruta del script
+      
+To check crontab :
 
+      sudo crontab -u root -l
+ 
 <h1 id="bonus">Bonus Part (WordPress Set up)</h1>
 <br>
 <h2 id="lighttpd">step 1: Lighttpd</h2>
