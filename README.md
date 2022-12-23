@@ -173,6 +173,17 @@ The user has to receive a warning message 7 days before their password expires.
 
       PASS_WARN_AGE 7
 
+Verify newly-created user's password expiry information via <code>sudo chage -l <username></code>.
+
+      $ sudo chage -l <username>
+      Last password change                                  : <last-password-change-date>
+      Password expires                                      : <last-password-change-date + PASS_MAX_DAYS>
+      Password inactive	                                : never
+      Account expires                                       : never
+      Minimum number of days between password change        : <PASS_MIN_DAYS>
+      Maximum number of days between password change        : <PASS_MAX_DAYS>
+      Number of days of warning before password expires     : <PASS_WARN_AGE>
+      
 Your password must be at least 10 characters long. It must contain an uppercase letter, a lowercase letter, and a number. Also, it must not             contain more than 3 consecutive identical characters. <br> <br>
  
  To do this part you should install libpam-pwquality
